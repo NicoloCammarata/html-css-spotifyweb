@@ -13,150 +13,208 @@
     --color: #a7a5a5;
 }
 
-/* header */
-
-header{
-    position: relative;
-}
-
-.header-container{
-    width: calc(100vw - 250px);
-    background-color: black;
-    opacity: 0.5;
-    height: 100px;
-    position: sticky;
-    position: absolute;
-    top: 0;
-    left: 250px;
-}
-
-.header-container div{
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-.header-container a{
-    color: #ffffff;
-    padding: 10px;
-    border: 1px white solid;
-    border-radius: 20px;
+a{
     text-decoration: none;
-    margin-right: 5px;
+    color: var(--color);
+}
 
+/* a-side */
+
+aside{
+    width: 200px;
+    height: calc(100vh - 100px);
+    background-color: black;
 }
 
 /* main */
 
-.container-1{
-    position: relative;
-}
-
-/* barra laterale */
-
-.barra-laterale{
-    width: 250px;
+main{
+    width: calc(100% - 200px);
     height: calc(100vh - 100px);
-    background-color: black;
-    color: #ffffff;
+    display: flex;
+
 }
 
-/* div-2 */
+/* header */
 
-.container-2{
-    width: calc(100vw - 250px);
-    height: calc(100vh - 200px);
-    background-color: rgb(20, 20, 34);
-    position: absolute;
-    top: 100px;
-    left: 250px;
+header{
+    width: 100% ;
+    height: 100px;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    right: 0;
+    
+
 }
 
-.header-container2{
-    height: 70px;
-    width: calc(100%);
-    align-items: flex-start;
-    justify-content: center;
-    border: 1px white dashed;
+.header{
+    height: 100%;
+    padding-right: 10px;
+    align-items: center;
+    justify-content: flex-end;
 }
 
-.box-header-container2{
-    padding: 15px;
- 
+header a{
+    padding: 5px;
+    border-radius: 20px;
+    border: 1px white solid;
+    
 }
 
-.box-header-container2 a{
-    color: var(--color);
-    text-decoration: none;
+
+
+/* nav */
+
+
+
+
+/* container */
+
+.pagina{
+    width: 100%;
+    height: calc(100vh - 100px);
+    padding-top: 100px;
+    overflow: auto;
 }
 
-/* div-3 */
-
-.titolo-3{
-    position: absolute;
-    color: white;
-    border: 1px white dashed;
-    padding: 10px;
-    top: 170px;
-    left: 250px;
+.pagina .container{
+    width: 100%;
+    height: 1000px;
+    background-color: rgb(21, 21, 33);
 }
 
-.main-3{
-    position: absolute;
-    border: 1px white dashed;
-    min-width: calc(100% - 250px);
-    min-height: 100px;
-    padding: 10px;
-    margin-left: 250px;
-    top: 220px;
+.pagina .container nav{
+    width: 100%;
+    height: 50px;
+    padding: 0 180px;
+    background-color: rgb(21, 21, 33);
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* recently-played */
+
+.recently-played{
+    padding: 0 20px;
     justify-content: space-between;
 
+
 }
 
-.main-3> *{
+h2{
+    color: white;
+    padding: 20px;
+}
+
+.recently-played div{
     width: calc(100% / 6 - 20px);
-    min-height: 100px;
-    border: 1px white dashed;
-
-}
-
-.main-3 div img{
-    width: 100%;
-}
-
-.subtitle{
     text-align: center;
+
 }
 
-.main-3 div div> *{
-    width: 100%;
+.recently-played div h3{
+    color: white;
 }
-.main-3 div div h3{
-    color: #ffffff;
-    padding: 5px 0;
-}
-.main-3 div div span{
+.recently-played div h4{
     color: var(--color);
 }
 
-/* div-4 */
-
-.titolo-4{
-    position: absolute;
-    color: white;
-    border: 1px white dashed;
-    padding: 10px;
-    top: 480px;
-    left: 250px;
+.recently-played div img{
+    width: 100%;
 }
 
+/* per te*/
 
-/* footer */
+.per-te{
+    padding: 0 20px;
+}
 
-.footer-container{
+.per-te div{
+    width: calc(100% / 6 - 20px);
+    text-align: center;
+
+}
+
+.per-te div:last-of-type{
+    margin-left: 20px;
+}
+
+.per-te div h3{
+    color: white;
+}
+.per-te div h4{
+    color: var(--color);
+}
+
+.per-te div img{
+    width: 100%;
+}
+
+/* artisti popolari */
+
+.sottotitolo{
+    padding-left: 20px;
+    color: var(--color);
+}
+
+.artisti{
+    padding: 0 20px;
+    padding-top: 10px;
+}
+
+.artisti div{
+    width: calc(100% / 6 - 20px);
+    text-align: center;
+
+}
+
+.artisti div:last-of-type{
+    margin-left: 20px;
+}
+
+.artisti div h3{
+    color: white;
+
+}
+
+.artisti div img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+footer{
     width: 100%;
     height: 100px;
-    background-color: rgb(49, 48, 48);
+    background-color: rgb(46, 44, 44);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and(max-width: 1100px){
+    .recently-played div{
+        width: calc(100% / 4 - 20px);
+    
+    }
+
+    
+}
+
+    
+
+    
