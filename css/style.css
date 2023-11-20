@@ -18,47 +18,69 @@ a{
     color: var(--color);
 }
 
+.none{
+    display: none;
+}
+
 /* a-side */
 
 aside{
     width: 200px;
-    height: calc(100vh - 100px);
+    height: 100%;
+    min-height: 400px;
+    flex-direction: column;
+    position: relative;
     background-color: black;
 }
 
 .spotify{
     width: 100%;
-    min-height: 100px;
+    height: 100px;
     padding: 15px;
-    align-items: center;
-    border: 1px white dashed;
+
 }
 
 .home, .cerca, .libreria{
     width: 100%;
-    min-height: 35px;
+    height: 35px;
     padding: 5px 15px;
     align-items: center;
-    border: 1px white dashed;
     color: var(--color);
+    align-content: center;
 }
+
+.home i, .cerca i, .libreria i{
+    padding-right: 5px;
+    align-content: center;
+}
+
 
 .playlist{
     width: 100%;
+    height: calc(100% - 300px);
+    padding: 5px 15px;
     overflow: auto;
-    border: 1px white dashed;
 
 }
 
 .container-playlist{
     width: 100%;
-    border: 1px white dashed;
+}
+.container-playlist2 {
+    width: 100%;
+    
 }
 
-.aside-container{
+.container-playlist{
+    color: white;
+}
+
+.aside-footer{
     width: 100%;
-    min-height: 100px;
-    border: 1px white dashed;
+    height: 100px;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
 }
 
 
@@ -81,7 +103,7 @@ main{
 /* header */
 
 header{
-    width: 100% ;
+    width: calc(100% - 200px) ;
     height: 100px;
     background-color: rgb(0, 0, 0);
     opacity: 0.5;
@@ -131,7 +153,6 @@ nav a:hover{
 
 .pagina .container{
     width: 100%;
-    height: 1000px;
     background-color: rgb(21, 21, 33);
 }
 
@@ -141,16 +162,17 @@ nav a:hover{
     padding: 0 180px;
     background-color: rgb(21, 21, 33);
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+}
+
+.pagina .container nav a{
+    padding-left: 10px;
 }
 
 /* recently-played */
 
 .recently-played{
-    padding: 0 20px;
-    justify-content: space-between;
-
-
+    padding: 0 10px;
 }
 
 h2{
@@ -160,11 +182,14 @@ h2{
 
 .recently-played div{
     width: calc(100% / 6 - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
     text-align: center;
     position: relative;
     z-index: 2;
 
 }
+
 
 .recently-played div h3{
     color: white;
@@ -330,7 +355,7 @@ footer{
 
 
 .box-2{
-    width: 400px;
+    width: 500px;
     height: 100%;
     min-width: 100px;
     align-items: center;
@@ -348,6 +373,7 @@ footer{
 .play a{
     width: calc(100% / 5);
     height: 100%;
+    min-width: 30px;
     align-items: center;
     justify-content: center;
 }
@@ -371,8 +397,9 @@ footer{
 
 }
 .barra{
-    min-width: 80%;
+    width: 80%;
     height: 50px;
+    min-width: 50px;
     align-items: center;
     
 }
@@ -424,16 +451,63 @@ footer{
 
 
 
-@media screen and(max-width: 1100px){
-    .recently-played div{
+@media (max-width: 1100px){
+    .recently-played div, .per-te div, .artisti div{
         width: calc(100% / 4 - 20px);
-        display: flex;
         flex-wrap: wrap;
-    
+   
     }
-
+    .pagina .container nav{
+        padding: 0 50px;
+        
+    }
+    .box-2{
+        width: 250px;
+    }
+    
     
 }
+@media (max-width: 700px){
+    .recently-played div, .per-te div, .artisti div{
+        width: calc(100% / 2 - 20px);
+        flex-wrap: wrap;
+   
+    }
+    .box-2{
+        width: 150px;
+    }
+    
+}
+@media (max-width: 600px){
+    aside{
+        width: 50px;
+    }
+    .spotify img:first-child{
+        display: none;
+    }
+    .spotify{
+        display: flex;
+        align-items: center;
+        color: white;
+    }
+    .none{
+        display: block;
+        width: 100%;
+        align-items: center;
+    }
+    .home span, .cerca span, .libreria span, .playlist{
+        display: none;
+    }
+    header{
+        width: calc(100% - 50px);
+    }
+    main{
+        width: calc(100vw - 50px);
+    }
+    
+    
+}
+
 
     
 
