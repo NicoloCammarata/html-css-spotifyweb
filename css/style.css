@@ -26,12 +26,55 @@ aside{
     background-color: black;
 }
 
+.spotify{
+    width: 100%;
+    min-height: 100px;
+    padding: 15px;
+    align-items: center;
+    border: 1px white dashed;
+}
+
+.home, .cerca, .libreria{
+    width: 100%;
+    min-height: 35px;
+    padding: 5px 15px;
+    align-items: center;
+    border: 1px white dashed;
+    color: var(--color);
+}
+
+.playlist{
+    width: 100%;
+    overflow: auto;
+    border: 1px white dashed;
+
+}
+
+.container-playlist{
+    width: 100%;
+    border: 1px white dashed;
+}
+
+.aside-container{
+    width: 100%;
+    min-height: 100px;
+    border: 1px white dashed;
+}
+
+
+.div-1{
+    height: calc(100vh - 100px);
+}
+
 /* main */
 
 main{
     width: calc(100% - 200px);
     height: calc(100vh - 100px);
     display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
 
 }
 
@@ -63,12 +106,19 @@ header a{
     
 }
 
+.header a:hover{
+    padding: 15px;
+}
+
 
 
 /* nav */
 
 
+nav a:hover{
+    color: white;
 
+}
 
 /* container */
 
@@ -111,6 +161,8 @@ h2{
 .recently-played div{
     width: calc(100% / 6 - 20px);
     text-align: center;
+    position: relative;
+    z-index: 2;
 
 }
 
@@ -124,6 +176,45 @@ h2{
 .recently-played div img{
     width: 100%;
 }
+
+
+
+.recently-played div div{
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    top: 50px;
+    left: 65px;
+   
+
+    
+}
+
+.recently-played div div:hover{
+    background-image: url(../img/play-solid.svg);
+
+   
+
+    
+}
+
+.recently-played div:hover{
+    opacity: 50%;
+   
+
+    
+}
+
+
+
+
+
+
+    
+    
+
+
+
 
 /* per te*/
 
@@ -184,19 +275,146 @@ h2{
     border-radius: 50%;
 }
 
+/* footer */
+
 footer{
     width: 100%;
     height: 100px;
+    position: absolute;
     background-color: rgb(46, 44, 44);
+}
+
+.footer-container{
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.footer-container .box-1{
+    min-width: 100px;
+    height: 70%;
+    align-items: center;
+}
+
+.footer-container .box-1 img{
+
+    height: 100%;
+}
+
+.footer-container .box-1 div{
+    min-width: 10px;
+    height: 100%;
+    padding-top: 17px;
+    padding-left: 5px;
+}
+
+.footer-container .box-1 div span{
+    color: var(--color);
+}
+.footer-container .box-1 div h5{
+    color: aliceblue;
+}
+.box1-b i{
+    font-size: 20px;
+    padding: 5px;
+}
+
+.box1-b{
+    align-items: center;
+    color: var(--color);
+    padding-bottom: 5px;
+}
+
+
+
+.box-2{
+    width: 400px;
+    height: 100%;
+    min-width: 100px;
+    align-items: center;
+}
+
+
+.play{
+    width: 100%;
+    height: 50%;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+.play a{
+    width: calc(100% / 5);
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.play-button{
+    font-size: 35px;
+}
+
+.bar{
+    width: 100%;
+    justify-content: center;
+}
+
+.minutaggio{
+    width: 10%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: center;
+
+}
+.barra{
+    min-width: 80%;
+    height: 50px;
+    align-items: center;
+    
+}
+
+.barra div{
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    border: 1px white solid;
+}
+.barra div div{
+    width: 20%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: white;
 }
 
 
 
 
+.box-3{
+    min-width: 200px;
+    height: 80%;
+    align-items: center;
+    justify-content: space-around;
+}
 
+.box-3 div{
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    border: 1px white solid;
 
+}
+.box-3 div div{
+    width: 25%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: white;
+    border: 1px white solid;
 
-
+}
 
 
 
@@ -209,6 +427,8 @@ footer{
 @media screen and(max-width: 1100px){
     .recently-played div{
         width: calc(100% / 4 - 20px);
+        display: flex;
+        flex-wrap: wrap;
     
     }
 
